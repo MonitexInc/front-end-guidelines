@@ -109,7 +109,7 @@
 
 # Purpose
 
-This documentation lives to establish the coding guidelines for a Front End development team.
+This documentation lives to establish the coding guidelines for the Front End engineering team.
 
 > **"It's to help us deliver high quality content that works better, reaches more
 > people - not only in today's browsers & devices, but in tomorrows."**
