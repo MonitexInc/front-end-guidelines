@@ -254,7 +254,8 @@ synchronously in a browser or emulator that is set to a minimum screen width of
   1. Mobile: no breakpoint
   2. Tablet: 768px breakpoint
   3. Desktop: 1024px breakpoint
-  4. Max page container width: 1440px
+  4. Max content container width: 1220px
+  5. Max page container width: 1440px
 
 #### Gesture-first mind-set
 
