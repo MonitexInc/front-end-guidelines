@@ -236,7 +236,7 @@ Expectations of "quality":
 
 ## General Methodologies
 
-- Prettier file [.prettierrc](https://github.com/MonitexInc/front-end-guidelines/blob/master/.prettierrc)
+- Prettier file [.prettierrc](.prettierrc)
 
 ### "Mobile-first" development
 
@@ -288,7 +288,7 @@ content to be activated by click or selection.
 
 ## HTML tools
 
-- Use our team's [ESLint file](eslint/test-files/.eslintrc.js) (includes Prettier rules) in 
+- Use our team's [ESLint file](.eslintrc.js) (includes Prettier rules) in 
   projects to automatically format your HTML to our guide's standards.
   [Read more about Prettier](https://prettier.io/docs/en/index.html).
 - [HTML 5 Outliner](https://gsnedders.html5.org/outliner/) can be utilized to 
