@@ -236,7 +236,7 @@ Expectations of "quality":
 
 ## General Methodologies
 
-- Prettier file (link to `.prettierrc`)
+- Prettier file [.prettierrc](https://github.com/MonitexInc/front-end-guidelines/blob/master/.prettierrc)
 
 ### "Mobile-first" development
 
