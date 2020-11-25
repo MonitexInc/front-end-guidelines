@@ -242,7 +242,7 @@ Expectations of "quality":
 
 Try the best practice of developing web pages "mobile-first" by testing 
 synchronously in a browser or emulator that is set to a minimum screen width of 
-**375px**.
+**320px**.
 
 > "Writing front-end code without considering mobile doesn't cut the mustard, it
 > cuts the cheese."
@@ -251,7 +251,7 @@ synchronously in a browser or emulator that is set to a minimum screen width of
 
 #### Hierarchy of audience
 
-  1. Mobile: no breakpoint
+  1. Mobile: no breakpoint, minimum screen support is 320px
   2. Tablet: 768px breakpoint
   3. Desktop: 1024px breakpoint
   4. Max content container width: 1220px
