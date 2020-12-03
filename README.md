@@ -212,23 +212,19 @@ Safari.
 All of our projects that live in a production environment must be tested and
 operate to QA level (QA level will vary from project to project) _quality_:
 
-Expectations of "quality":
+A single web page's expectations of "quality" :
 
-- [x] page operates and serves it's purpose
-      ([Minimum browser support](#minimum-browser-support))
-- [x] does not look broken ([Minimum browser support](#minimum-browser-support))
-- [x] no JavaScript errors found in Console
-      ([Minimum browser support](#minimum-browser-support))
-- [x] no server-side errors rendered in front-end client code
-      ([Minimum browser support](#minimum-browser-support))
-- [x] page source is tested with the
+- [ ] page operates and serves its purpose
+- [ ] page does not look broken or contain framework/server-side error messages
+- [ ] page contains no errors in Console (warnings are permitted)
+- [ ] page source is tested with the
       [W3C Markup Validation Service](https://validator.w3.org/) and passes with
-      minimal warning and 0 (zero) errors
-- [x] page is tested with [Lighthouse](https://web.dev/measure) (web app or
+      minimal warnings (best judgement) and 0 errors
+- [ ] page is tested with [Lighthouse](https://web.dev/measure) (web app or
       browser extension) and passes a minimum score of **70** for
       **Performance**, **Accessibility**, **Best Practices**, and **SEO**
-  - 3rd party libraries that impact production performance must be taken into 
-  consideration but are not counted towards this minimum score of 70
+
+3rd party libraries that impact production performance must be taken into consideration but are not counted towards this minimum score of 70
 
 ## General Principals
 
