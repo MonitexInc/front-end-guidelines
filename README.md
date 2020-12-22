@@ -236,7 +236,7 @@ A [master template checklist](https://docs.google.com/spreadsheets/d/1jy020o6_uI
 
 When starting a QA phase for a page or set of pages, create a copy of the [master template checklist](https://docs.google.com/spreadsheets/d/1jy020o6_uIVHppS_gWNU2brc3kitY9-nurguiqKomJo/edit?usp=sharing) and rename to include the JIRA ticket ID, QA round, and ` - Front end QA checklist` suffixed to the end of the title. Example: `NBA-137 - QA Round 1 - Front end QA checklist`.
 
-After the new checlist has been created, please add the link to it to the JIRA ticket associated with it.
+After the new checklist has been created, please add the link to it to the JIRA ticket associated with it.
 
 Lastly, correct the JIRA Ticket link to be the one associated with the QA work to complete the JIRA&nbsp;<>&nbsp;Checklist loop.
 
