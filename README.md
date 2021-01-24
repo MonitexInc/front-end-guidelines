@@ -5243,7 +5243,7 @@ Custom fonts should be loaded from the project itself and not through a CDN serv
 
 ## Git
 
-All code is verioned with Git.
+All code is versioned with Git.
 
 ### Commits
 
@@ -5262,19 +5262,19 @@ All code is verioned with Git.
 
 ### Branching
 
-Our branch naming conventions are set to have all branch names hyphenated `-` (no spaces or `_`), in lower-case and organised in folders by utilizing a `/` (only one allowed. `master` and `perf` expluded).
+Our branch naming conventions are set to have all branch names hyphenated `-` (no spaces or `_`), in lower-case and organised in folders by utilizing a `/` (only one allowed. `main` (formerly `master`) and `develop` expluded).
 
-- `master`
+- `main`
 
-  The `master` branch is where all branches spawn from. It contains the tested, polished, and most stable version of your project. Code in `master` directly mirrors what is in Production.
+  The `main` branch is where all branches spawn from. It contains the tested, polished, and most stable version of your project. Code in `main` directly mirrors what is in Production.
 
-  The only branch that can be merged into `master` is `perf` and merging requires **approval**
+  The only branch that can be merged into `main` is `develop` and merging requires **approval**
 
-  `master` can not be merged into any branch. Ever.
+  `main` can not be merged into any branch. Ever.
 
-- `perf`
+- `develop`
 
-  This branch is used as the staging area for all other branches to be merged into before being promoted to `master`. It is treated as a mirror of `master` and is used for quality assurance, testing, stakeholder previews, and approvals.
+  This branch is used as the staging area for all other branches to be merged into before being promoted to `main`. It is treated as a mirror of `main` and is used for quality assurance, testing, stakeholder previews, and approvals.
 
 - `wrike/`
 
@@ -5296,13 +5296,13 @@ Our branch naming conventions are set to have all branch names hyphenated `-` (n
 
 - `archive/`
 
-  For projects that do not follow a semantic versioning process, there will be scenarios where you want to remove a full page, or pages, or piece(s) of functionality , but you want to keep a working state of the project in case you need to go back to reference that state. To do this, make a branch of `master` and name it `archive/` followed by a lower-case, hyphenated description that is not too long but still gives enough context for quick visual reference.
+  For projects that do not follow a semantic versioning process, there will be scenarios where you want to remove a full page, or pages, or piece(s) of functionality , but you want to keep a working state of the project in case you need to go back to reference that state. To do this, make a branch of `main` and name it `archive/` followed by a lower-case, hyphenated description that is not too long but still gives enough context for quick visual reference.
 
   Example: `archive/teal-and-green-brand-colours`
 
 - `decommission/`
 
-  These branches and `archive` branches work together. After making an `archive` branch from `master`, make a new branch off of `master` as the `decommission` branch and do all the work necessary to remove the functionality and/or pages from the project.
+  These branches and `archive` branches work together. After making an `archive` branch from `main`, make a new branch off of `main` as the `decommission` branch and do all the work necessary to remove the functionality and/or pages from the project.
 
   Example: `decommission/teal-and-green-brand-colours`
 
@@ -5316,7 +5316,7 @@ Our branch naming conventions are set to have all branch names hyphenated `-` (n
 
 - `fix/`
 
-  A `fix` branch is a short-lived branch that addresses an issues like regression bugs, spelling mistakes, removing a `console.log()` that ended up in production code. After a `fix` branch has been merged into `master`, it can be safely removed.
+  A `fix` branch is a short-lived branch that addresses an issues like regression bugs, spelling mistakes, removing a `console.log()` that ended up in production code. After a `fix` branch has been merged into `main`, it can be safely removed.
 
   Example: `fix/product-card-typos`
 
@@ -5324,16 +5324,16 @@ Our branch naming conventions are set to have all branch names hyphenated `-` (n
 
 ### Merging
 
-- Never merge `master` into another branch
-- Only `perf` can be merged into master. **_Requires code review and approval._**
-- Merging a working branch into `perf` must be done through a
+- Never merge `main` into another branch
+- Only `develop` can be merged into master. **_Requires code review and approval._**
+- Merging a working branch into `develop` must be done through a
   [GitHub Pull Request](#pull-requests--pr-). **_Requires code review and approval._**
 - If your working branch becomes "stale" (has not had any commits in the
   previous 3 weeks or longer), it is a _GREAT_ idea to check it out, and then
-  merge `perf` into it to see what conflicts may arise.
+  merge `develop` into it to see what conflicts may arise.
   > Why? Getting started on these conflicts early will save you, potentially, an
   > enormous amount of time from discovering the conflict when you complete your
-  > work and do your Pull Request into `perf`.
+  > work and do your Pull Request into `develop`.
 
 **[⬆ Back to top](#table-of-contents)**
 
