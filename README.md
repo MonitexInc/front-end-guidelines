@@ -160,7 +160,8 @@ For additions or contributions to these code guidelines,
 - PC: Windows 7 and 10 (8 not supported)
 - Mac: High Sierra
 - Android: any device that supports Chrome 86 or higher
-- iOS: Phone 5s/6/7/8/8P/X and iPad
+- iPhone: 5s/6/7/8/8P/X (Any [Supported iPhone models](https://support.apple.com/en-ca/guide/iphone/iphe3fa5df43/12.0/ios/12.0) that support iOS 12)
+- iPadOS: iPad mini 4 (Any [iPadOS Supported Models](https://support.apple.com/en-ca/guide/ipad/ipad213a25b2/14.0/ipados/14.0) that support iOS 14)
 
 **[⬆ Back to top](#table-of-contents)**
 
