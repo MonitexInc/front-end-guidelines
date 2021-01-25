@@ -149,18 +149,18 @@ For additions or contributions to these code guidelines,
 
 ## Minimum browser support
 
-- IE 11 version 11.x
-- Safari 11.1
+- Safari 12
 - Edge latest -2
 - Firefox latest -2
 - Chrome latest -2
+- Samsung 13
 
 ## Minimum device support
 
-- PC: Windows 10
+- PC: Windows 7 and 10 (8 not supported)
 - Mac: High Sierra
-- Android: any device that supports Chrome 79.x
-- iOS: Phone 6/7/8/8P/X and iPad
+- Android: any device that supports Chrome 86 or higher
+- iOS: Phone 5s/6/7/8/8P/X and iPad
 
 **[⬆ Back to top](#table-of-contents)**
 
