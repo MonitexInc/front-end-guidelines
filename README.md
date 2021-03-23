@@ -231,11 +231,11 @@ A single web page's expectations of "quality":
 
 ## Front End QA Checklist
 
-A [master template checklist](https://docs.google.com/spreadsheets/d/1jy020o6_uIVHppS_gWNU2brc3kitY9-nurguiqKomJo/edit?usp=sharing) has been created to set clear expectations for the frot end work being produced by Bitbuy.
+A [master template checklist](https://docs.google.com/spreadsheets/d/1jy020o6_uIVHppS_gWNU2brc3kitY9-nurguiqKomJo/edit?usp=sharing) has been created to set clear expectations for the front end work being produced by Bitbuy.
 
 ### Using the checklist
 
-When starting a QA phase for a page or set of pages, create a copy of the [master template checklist](https://docs.google.com/spreadsheets/d/1jy020o6_uIVHppS_gWNU2brc3kitY9-nurguiqKomJo/edit?usp=sharing) and rename to include the JIRA ticket ID, QA round, and ` - Front end QA checklist` suffixed to the end of the title. Example: `NBA-137 - QA Round 1 - Front end QA checklist`.
+When starting a QA phase for a page or set of pages, create a copy of the [master template checklist](https://docs.google.com/spreadsheets/d/1jy020o6_uIVHppS_gWNU2brc3kitY9-nurguiqKomJo/edit?usp=sharing) and rename it to include the JIRA ticket ID, QA round, and ` - Front end QA checklist` suffixed to the end of the title. Example: `NBA-137 - QA Round 1 - Front end QA checklist`.
 
 After the new checklist has been created, please add the link to it to the JIRA ticket associated with it.
 
@@ -313,7 +313,7 @@ content to be activated by click or selection.
 ## HTML syntax
 
 - Limit HTML files width to 80 characters
-- Use lower case tags with double quote attributes
+- Use lowercase tags with double quote attributes
 
   ```html
   <!-- Avoid -->
@@ -552,7 +552,7 @@ content to be activated by click or selection.
     specific selector or uses `!important` and you need to override, please flag
     this with your team or in your code review and add `!important` as needed.
 - Do not create specific/nested selectors (this can easily lead to UI regression
-  issues); instead make reuseable styles that fulfill a design pattern
+  issues); instead make reusable styles that fulfill a design pattern
 
   ```css
   /* Avoid */
@@ -630,7 +630,7 @@ content to be activated by click or selection.
 - Media queries we support are `368px` ("Small" or "Mobile"), `768px` ("Large"
   or "Tablet"), and `1024px` ("Large" or "Desktop")
 - Keep CSS completely separate from HTML
-- Create re-useable classes and avoid unique classes that do the same thing
+- Create reusable classes and avoid unique classes that do the same thing
 - Long-hand syntax is totally fine; readable code is better code
 - Use lower-case
   [Two Dashes style BEM naming convention](https://en.bem.info/methodology/naming-convention/#two-dashes-style):
@@ -761,7 +761,7 @@ content to be activated by click or selection.
   }
   ```
 
-- End all declarations with a semi-colon
+- End all declarations with a semicolon
 - Avoid including spaces after commas within `rgb()`, `rgba()`, `hsl()`,
   `hsla()`, or `rect()` values
 - Prefix property values with a leading zero e.g.
@@ -3341,7 +3341,7 @@ content to be activated by click or selection.
   }
   ```
 
-- Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you’re pointing out a problem that needs to be revisited, or if you’re suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME: -- need to figure this out` or `TODO: -- need to implement`.
+- Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you’re pointing out a problem that needs to be revisited, or if you’re suggesting a solution to the problem that needs to be implemented. These are different from regular comments because they are actionable. The actions are `FIXME: -- need to figure this out` or `TODO: -- need to implement`.
 
 - Use `// FIXME:` to annotate problems.
 
@@ -4172,7 +4172,7 @@ content to be activated by click or selection.
   export default AirbnbStyleGuide
   ```
 
-- Acronyms and initialisms should always be all uppercased, or all lowercased.
+- Acronyms and initialisms should always be all uppercased, or all lowercase.
 
   > Why? Names are for readability, not to appease a computer algorithm.
 
@@ -4547,7 +4547,7 @@ contains utilities that are functionally broken but remain for legacy reasons.
   ConstructorNamesLikeThis; // Pascal Case
   EnumNamesLikeThis; // Pascal Case
   methodNamesLikeThis; //camelCase
-  SYMBOLIC_CONSTANTS_LIKE_THIS; // upper case spaced with underscores
+  SYMBOLIC_CONSTANTS_LIKE_THIS; // uppercase spaced with underscores
   ```
 
 **[⬆ Back to top](#table-of-contents)**
@@ -4556,7 +4556,7 @@ contains utilities that are functionally broken but remain for legacy reasons.
 
 - Use pure functions over classes (`React.createClass`). React now has [hooks](https://reactjs.org/docs/hooks-intro.html) for state and refs so classes are no longer necessary.
 - JavaScript files which use JSX should end with `.jsx` so that it's easy to
-  differentiate JavaScript that's not dependant on importing a particular
+  differentiate JavaScript that's not dependent on importing a particular
   library like React.
 - Use PascalCase for filenames. E.g., ReservationCard.jsx.
 - If a function requires no type rules/testing, it can be written without a
@@ -4850,7 +4850,7 @@ contains utilities that are functionally broken but remain for legacy reasons.
 
 - Do not use words like "image", "photo", or "picture" in `<img>` `alt` props. eslint: [`jsx-a11y/img-redundant-alt`](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md)
 
-  > Why? Screenreaders already announce `img` elements as images, so there is no need to include this information in the alt text.
+  > Why? screen readers already announce `img` elements as images, so there is no need to include this information in the alt text.
 
   ```jsx
   // bad
@@ -4875,7 +4875,7 @@ contains utilities that are functionally broken but remain for legacy reasons.
 
 - Do not use `accessKey` on elements. eslint: [`jsx-a11y/no-access-key`](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-access-key.md)
 
-  > Why? Inconsistencies between keyboard shortcuts and keyboard commands used by people using screenreaders and keyboards complicate accessibility.
+  > Why? Inconsistencies between keyboard shortcuts and keyboard commands used by people using screen readers and keyboards complicate accessibility.
 
   ```jsx
   // bad
@@ -5128,17 +5128,17 @@ keep the following as the most important concerns:
    scope all of your other classes because you want to avoid styles bleeding over
    into other components/pages.
 2. **CSS must be portable.** Compose your CSS with the expectation that
-   another developer will ask to use the same style you made. A reuseable button
-   style is very valueable and requires very little extra work. You also want
+   another developer will ask to use the same style you made. A reusable button
+   style is very valuable and requires very little extra work. You also want
    your style to continue to work on a component if a `<span>` is moved or
    removed.
 3. **CSS must be readable, findable, and maintainable.** Inline styles left
    all over a component may be the quickest way to achieve scoped and portable
    CSS, but it's _hell_ for another person to find, fix, and/or change. Have your
-   CSS-in-JS live in the same area that is set by exisiting components. Look at
+   CSS-in-JS live in the same area that is set by existing components. Look at
    other components and model after them. If you don't know which component to
    model from, _ask your team_. It'll come up in a future code review anyway -
-   save yourself the embarassment 😉
+   save yourself the embarrassment 😉
 
 ### Approach 1: CSS Modules
 
@@ -5148,8 +5148,8 @@ the project.
 This method has the following benefits:
 
 - Achieves all three main concerns stated above.
-- Separates your CSS converns from your JSX (HTML and JavaScript).
-- Argueably the most portable method as all CSS is stored in a `.css/.scss` file.
+- Separates your CSS concerns from your JSX (HTML and JavaScript).
+- Arguably the most portable method as all CSS is stored in a `.css/.scss` file.
   that can be dropped in or directly imported on another component.
 - Less of a learning-curve over `styled-components`.
 
@@ -5165,7 +5165,7 @@ Drawbacks:
 This method has the following benefits:
 
 - Achieves all three main concerns stated above but is more difficult to
-  maintian depending on the complexity of it.
+  maintain depending on the complexity of it.
 - You can have your styles live closer to your JSX and remove the need to
   maintain styles in completely different files.
 - There may be situations where using `.css`/`.scss` isn't an option. CSS-in-JS
@@ -5216,9 +5216,9 @@ Custom fonts should be loaded from the project itself and not through a CDN serv
 
 - Use [Lighthouse](https://web.dev/measure) (web app or browser extension) for perf testing. A minimum score of **70** for **Performance**, **Accessibility**, **Best Practices**, and **SEO** is expected.
 
-- [Pingdom Speed Test](https://tools.pingdom.com/) or [Google PageSpeed](https://developers.google.com/speed) can be used to tst page speeds.
+- [Pingdom Speed Test](https://tools.pingdom.com/) or [Google PageSpeed](https://developers.google.com/speed) can be used to test page speeds.
 
-- We currently have to automated tools or dashboards for perf tests and site health.
+- We currently have automated tools or dashboards for perf tests and site health.
 
 # Accessibility
 
@@ -5263,7 +5263,7 @@ All code is versioned with Git.
 
 ### Branching
 
-Our branch naming conventions are set to have all branch names hyphenated `-` (no spaces or `_`), in lower-case and organised in folders by utilizing a `/` (only one allowed. `main` (formerly `master`) and `develop` expluded).
+Our branch naming conventions are set to have all branch names hyphenated `-` (no spaces or `_`), in lower-case and organised in folders by utilizing a `/` (only one allowed. `main` (formerly `master`) and `develop` excluded).
 
 - `main`
 
@@ -5285,7 +5285,7 @@ Our branch naming conventions are set to have all branch names hyphenated `-` (n
 
 - `feature/`
 
-  A `feature` branch is a task which is neither captured in GitHub or Wrike but adds new fucntionality to a project. Just add a lower-case, hyphenated description that is not too long but still gives enough context for quick visual reference after `feature/`.
+  A `feature` branch is a task which is neither captured in GitHub or Wrike but adds new functionality to a project. Just add a lower-case, hyphenated description that is not too long but still gives enough context for quick visual reference after `feature/`.
 
   Example: `feature/refactor-6-components-to-1`
 
@@ -5317,7 +5317,7 @@ Our branch naming conventions are set to have all branch names hyphenated `-` (n
 
 - `fix/`
 
-  A `fix` branch is a short-lived branch that addresses an issues like regression bugs, spelling mistakes, removing a `console.log()` that ended up in production code. After a `fix` branch has been merged into `main`, it can be safely removed.
+  A `fix` branch is a short-lived branch that addresses issues like regression bugs, spelling mistakes, removing a `console.log()` that ended up in production code. After a `fix` branch has been merged into `main`, it can be safely removed.
 
   Example: `fix/product-card-typos`
 
@@ -5376,7 +5376,7 @@ All source code is stored in [GitHub](https://github.com/)
 > _Holger Frohloff [How do you review a pull request?](https://holgerfrohloff.de/how-do-you-review-a-pull-request/)_
 
 - Try not to take code review comments as personal attacks (unless there are
-  litterally perosnal attacks in the code review comments - that's something that
+  literally personal attacks in the code review comments - that's something that
   your leader should definitely be made aware of). Try to think of code reviews as
   two artists getting together to create something even better; if Mozart and Post
   Malone were to work together on the same song - imagine the incredible end
@@ -5412,7 +5412,7 @@ Infrastructure is beyond the scope of this document.
 ## README documentation
 
 Documentation is kept in README.md (please name these files `README.md`) files
-in projects and should bbe kept fresh and accurate.
+in projects and should be kept fresh and accurate.
 
 # Kudos
 
