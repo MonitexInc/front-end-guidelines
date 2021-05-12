@@ -95,6 +95,7 @@
   - [Git](#git)
     - [Commits](#commits)
     - [Branching](#branching)
+      - [Branches](#branches)
     - [Merging](#merging)
   - [GitHub](#github)
     - [Pull Requests "PR"](#pull-requests--pr-)
@@ -5263,78 +5264,81 @@ All code is versioned with Git.
 
 ### Branching
 
-Our branch naming conventions are set to have all branch names hyphenated `-` (no spaces or `_`), in lower-case and organised in folders by utilizing a `/` (only one allowed. `main` (formerly `master`) and `develop` excluded).
+Our branch naming conventions are set to have all branch names hyphenated `-` (no spaces or `_`), in lower-case and organised in folders by utilizing a single `/`.
 
-- `main`
+The following branches should never be renamed:
 
-  The `main` branch is where all branches spawn from. It contains the tested, polished, and most stable version of your project. Code in `main` directly mirrors what is in Production.
-
-  The only branch that can be merged into `main` is `develop` and merging requires **approval**
-
-  `main` can not be merged into any branch. Ever.
-
+- `master`
+- `preview`
+- `uat`
 - `develop`
 
-  This branch is used as the staging area for all other branches to be merged into before being promoted to `main`. It is treated as a mirror of `main` and is used for quality assurance, testing, stakeholder previews, and approvals.
+Do not make branches such as `master/NBA-1000-foo` or `develop/NBA-1000-foo`.
 
-- `wrike/`
+Do not include more than one `/` in a branch name e.g. `feature/NBA-1000/new-shiny-feature`.
 
-  These branches come from issues submitted on Wrike and should include the Wrike ID # right after `issue/`. No description is needed as the Wrike # can be used to find the description.
+When adding a short description to a branch name, just add a lower-case, hyphenated description that is not too long but still gives enough context for quick visual reference
 
-  Example: `wrike/425591521` is the branch for [https://www.wrike.com/open.htm?id=425591521](https://www.wrike.com/open.htm?id=425591521)
+#### Branches
 
-- `feature/`
+**master**
 
-  A `feature` branch is a task which is neither captured in GitHub or Wrike but adds new functionality to a project. Just add a lower-case, hyphenated description that is not too long but still gives enough context for quick visual reference after `feature/`.
+The `master` branch is where all branches spawn from. It contains the tested, polished, and most stable version of your project. Code in `master` directly mirrors what is in Production.
 
-  Example: `feature/refactor-6-components-to-1`
+The only branch that can be merged into `master` is `preview` and merging requires **approval**
 
-- `release/`
+`master` can only be merged into `preview`.
 
-  This is a branch that can be used as 1) a staging point for a number of other branches to be merged into it for a new, versioned, release of software 2) a historical state of the software. Following `release/` you add the version number of the release.
+**preview**
 
-  Example: `release/1.2.14`
+The `preview` branch is a "pre-production" environment where you can test new features using production data _without_ releasing changes to live users.
 
-- `archive/`
+The only branch that can be merged into `preview` is `uat` and merging requires **approval**
 
-  For projects that do not follow a semantic versioning process, there will be scenarios where you want to remove a full page, or pages, or piece(s) of functionality , but you want to keep a working state of the project in case you need to go back to reference that state. To do this, make a branch of `main` and name it `archive/` followed by a lower-case, hyphenated description that is not too long but still gives enough context for quick visual reference.
+`preview` can only be merged into `master` and `uat`.
 
-  Example: `archive/teal-and-green-brand-colours`
+**develop**
 
-- `decommission/`
+This branch is used as the staging area for all other branches to be merged into before being promoted to `master`. It is treated as a mirror of `master` and is used for quality assurance, testing, stakeholder previews, and approvals.
 
-  These branches and `archive` branches work together. After making an `archive` branch from `main`, make a new branch off of `main` as the `decommission` branch and do all the work necessary to remove the functionality and/or pages from the project.
+**bugfix/**
 
-  Example: `decommission/teal-and-green-brand-colours`
+These branches come from issues submitted on Jira and their name should include the Jira ID # and a short description.
 
-  **Exceptions:** If the decommission work is captured in a Wrike task or GitHub Issue, follow the guidelines for a `wrike` branch or `issue` branch
+After a `bugfix` branch has been merged from `develop` into `master`, it can be safely removed.
 
-- `issue/`
+Example: `bugfix/NBA-823-mobile-comparison` is the branch for [https://bitbuy.atlassian.net/browse/NBA-823](https://bitbuy.atlassian.net/browse/NBA-823)
 
-  These branches come from issues submitted on GitHub and should include the issue # right after `issue/`, followed by a lower-case, hyphenated description that is not too long but still gives enough context for quick visual reference.
+**hotfix**
 
-  Example: **Displaying errors in Radio/Checkbox groups #1393** would become `issue/1393-display-errors-radio-checkbox-groups`
+These branches are unique branches made for emergency patching of our Production environment. These branches can either come from JIRA or made on-the-spot. If from JIRA, the branch should follow the same naming convention as `bugfix/` branches.
 
-- `fix/`
+These branches are merged into `master` and `develop`.
 
-  A `fix` branch is a short-lived branch that addresses issues like regression bugs, spelling mistakes, removing a `console.log()` that ended up in production code. After a `fix` branch has been merged into `main`, it can be safely removed.
+After a `hotfix` branch has been merged into `develop` and `master`, it can be safely removed.
 
-  Example: `fix/product-card-typos`
+Example: `hotfix/invalid-error-message`
+
+**feature**
+
+A `feature` branch is a task which adds new functionality to a project and their name should include the Jira ID # and a short description.
+
+Example: `feature/NBA-591-settings-remove-document-section`
 
 **[⬆ Back to top](#table-of-contents)**
 
 ### Merging
 
-- Never merge `main` into another branch
-- Only `develop` can be merged into master. **_Requires code review and approval._**
+- Never merge `master` into another branch
+- Only `preview` can be merged into master. **_Requires approval_**
 - Merging a working branch into `develop` must be done through a
-  [GitHub Pull Request](#pull-requests--pr-). **_Requires code review and approval._**
+  [GitHub Pull Request](#pull-requests--pr-).
 - If your working branch becomes "stale" (has not had any commits in the
   previous 3 weeks or longer), it is a _GREAT_ idea to check it out, and then
   merge `develop` into it to see what conflicts may arise.
   > Why? Getting started on these conflicts early will save you, potentially, an
   > enormous amount of time from discovering the conflict when you complete your
-  > work and do your Pull Request into `develop`.
+  > work and do your Pull Request into `develop`. It also saves the reviewer of your pull request from having to ask you to resolve conflicts before they can review.
 
 **[⬆ Back to top](#table-of-contents)**
 
@@ -5350,7 +5354,7 @@ All source code is stored in [GitHub](https://github.com/)
   > Why? We encourage commit messages that succinctly describe what changes a
   > commit introduces.
 - We use before-commit hooks in Git to test your branch before it gets merged.
-- If you're creating a PR for a Wrike task, please add the Wrike's link in the
+- If you're creating a PR for a Jira task, please add the Jira link in the
   description of the PR.
 - If the PR has a template, please follow the instructions in the template. If
   the template does not accurately cover what needs to be covered, please flag it
