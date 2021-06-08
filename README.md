@@ -4910,6 +4910,7 @@ contains utilities that are functionally broken but remain for legacy reasons.
 
   ```jsx
   // bad
+  import PropTypes from 'prop-types'
   const SFC = ({ foo, bar, children }) => {
     return (
       <div>
@@ -4926,7 +4927,9 @@ contains utilities that are functionally broken but remain for legacy reasons.
   }
 
   // good
-  const SFC = ({ foo, bar, children }) => {
+  import PropTypes from 'prop-types'
+
+  const SpicyComponent = ({ foo, bar, children }) => {
     return (
       <div>
         {foo}
@@ -4935,15 +4938,19 @@ contains utilities that are functionally broken but remain for legacy reasons.
       </div>
     )
   }
-  SFC.propTypes = {
+
+  SpicyComponent.propTypes = {
     foo: PropTypes.number.isRequired,
     bar: PropTypes.string,
     children: PropTypes.node,
   }
-  SFC.defaultProps = {
+
+  SpicyComponent.defaultProps = {
     bar: '',
     children: null,
   }
+
+  export default SpicyComponent
   ```
 
 - Avoid spread props as much as you can!
